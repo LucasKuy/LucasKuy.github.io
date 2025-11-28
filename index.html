@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- page setup and fonts -->
+    <meta charset="UTF-8">
+    <title>Lucas Kuyvenhoven | Software Developer Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- main style file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- header with my name and navigation links -->
+<header class="site-header">
+    <div class="container nav-container">
+        <div class="logo">
+            <span class="logo-mark">&lt;/&gt;</span>
+            <span class="logo-text">Lucas Kuyvenhoven</span>
+        </div>
+
+        <nav class="main-nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- hero section with summary and headshot -->
+    <section id="about" class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <p class="tagline">Aspiring Software Developer and Student</p>
+                <h1>Hi, I am <span class="accent">Lucas Kuyvenhoven</span>.</h1>
+                <p class="summary">
+                    I am a Computer Systems Technician and Software Support student at Mohawk College.
+                    I am in my third semester and I have been on the Dean's Honour List twice.
+                    I have experience building tools in Python, C sharp, Java, PHP, and web technologies.
+                    I care about clear code, testing, and reliable results.
+                    During my co op term at Wessuc Inc. I created internal applications that helped with fuel costing,
+                    repair scheduling, and camera photo tracking for accounting staff and field teams.
+                    I am interested in junior and entry level software developer roles where I can keep learning,
+                    contribute to useful projects, and work with experienced developers.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View My Projects</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+
+                <p class="assignment-note">
+                    This portfolio website was created for a college assignment using GitHub Pages.
+                </p>
+            </div>
+
+            <div class="hero-image">
+                <img src="headshot.jpg" alt="Photo of Lucas Kuyvenhoven" class="hero-photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- skills section listing languages, tools and soft skills -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-intro">
+                These are the main technologies and skills I have used in coursework, my co op term, and personal projects.
+            </p>
+
+            <div class="skills-grid">
+                <article class="card">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C sharp</li>
+                        <li>PHP</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Web and Frameworks</h3>
+                    <ul>
+                        <li>HTML and CSS</li>
+                        <li>Flask with Python</li>
+                        <li>Basic React and React Native from coursework</li>
+                        <li>XML</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Platforms and Tools</h3>
+                    <ul>
+                        <li>Zoho Creator, Zoho Flow, Zoho WorkDrive</li>
+                        <li>Grist</li>
+                        <li>Git and GitHub</li>
+                        <li>Visual Studio and Visual Studio Code</li>
+                        <li>SQL Server Management Studio</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Concepts and Practices</h3>
+                    <ul>
+                        <li>Object Oriented Programming</li>
+                        <li>Data structures such as lists, stacks, queues, and trees</li>
+                        <li>Unit testing and debugging</li>
+                        <li>REST APIs and webhooks</li>
+                        <li>Automation and business logic</li>
+                        <li>CSV and Excel data parsing and reporting</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Clear written and verbal communication</li>
+                        <li>Teamwork and collaboration</li>
+                        <li>Customer service and problem solving</li>
+                        <li>Time management and reliability</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- projects section with main co-op and school projects -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-intro">
+                These projects show my experience with real data, automation, and application development.
+                Some were created during my co op term and others were completed for courses.
+            </p>
+
+            <div class="projects-grid">
+                <article class="card project-card">
+                    <h3>Fuel Costing Web Application for Wessuc Inc.</h3>
+                    <p class="project-tagline">
+                        Python and Flask application that helps accountants calculate fuel costs for trucks and projects.
+                    </p>
+                    <ul class="project-details">
+                        <li>Built a Python and Flask web application that lets staff upload CSV and Excel fuel billing files from different vendors.</li>
+                        <li>Calculated cost per truck, cost per project, and month by month summaries with a simple web interface.</li>
+                        <li>Connected results to Zoho Creator so fuel usage could be linked to trucks and projects for reporting.</li>
+                    </ul>
+                    <p class="project-tech">
+                        <strong>Technologies:</strong> Python, Flask, HTML, CSS, Zoho Creator, CSV and Excel data
+                    </p>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Truck Repair Scheduling Automation</h3>
+                    <p class="project-tagline">
+                        Workflow that connects Grist, Zoho Flow, email, and calendars to keep repair schedules up to date.
+                    </p>
+                    <ul class="project-details">
+                        <li>Connected the Grist repair tracking system to Zoho Flow using webhooks so changes could trigger actions.</li>
+                        <li>Sent emails, Zoho Cliq messages, and calendar events when repair statuses changed or appointments moved.</li>
+                        <li>Helped mechanics, supervisors, and office staff see the latest information in one place.</li>
+                    </ul>
+                    <p class="project-tech">
+                        <strong>Technologies:</strong> Zoho Flow, Grist, webhooks, Zoho Cliq, calendar services
+                    </p>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Camera Photo Logging Application</h3>
+                    <p class="project-tagline">
+                        Zoho Creator app that manages hourly camera images and solids detection logs for field staff.
+                    </p>
+                    <ul class="project-details">
+                        <li>Created a Zoho Creator app that retrieves the most recent image from Zoho WorkDrive for more than twenty cameras.</li>
+                        <li>Let users log in, choose their project and cameras, and mark each image with solids detection information.</li>
+                        <li>Sent regular email summaries and provided basic dashboards that showed completed and pending photos.</li>
+                    </ul>
+                    <p class="project-tech">
+                        <strong>Technologies:</strong> Zoho Creator, Zoho WorkDrive, Deluge, scheduled tasks, email integration
+                    </p>
+                </article>
+
+                <article class="card project-card">
+                    <h3>Academic Projects at Mohawk College</h3>
+                    <p class="project-tagline">
+                        Course work in C sharp, Java, and PHP that focuses on core programming ideas and software quality.
+                    </p>
+                    <ul class="project-details">
+                        <li>Created a C sharp Windows Forms application that simulates a hair salon booking and pricing system.</li>
+                        <li>Implemented Java data structures and algorithms, including a sorted linked list and simple tree structures.</li>
+                        <li>Built PHP web applications with form handling, validation, and session based features for simple games and tools.</li>
+                    </ul>
+                    <p class="project-tech">
+                        <strong>Technologies:</strong> C sharp with .NET, Java, PHP, SQL, Visual Studio
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- education section showing school history -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Computer Systems Technician, Software Support</h3>
+                        <p class="timeline-place">Mohawk College, Hamilton, Ontario</p>
+                        <p class="timeline-date">2023 to present</p>
+                        <ul>
+                            <li>Third semester student with Dean's Honour List standing in the first two semesters.</li>
+                            <li>Relevant courses include Data Structures and Algorithms with Java, Server Side Programming with PHP,
+                                Software Quality and Testing, Databases and SQL, and Application Development with C sharp and .NET.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Worker Health and Safety Awareness Certificate</h3>
+                        <p class="timeline-place">Ontario</p>
+                        <p class="timeline-date">Completed in 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- resume section with work history and download link -->
+    <section id="resume" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <p class="section-intro">
+                Below is a short version of my experience. You can also download my full resume as a document.
+            </p>
+
+            <div class="resume-grid">
+                <div class="card">
+                    <h3>Recent Experience</h3>
+                    <h4>Software Developer Co op, Wessuc Inc.</h4>
+                    <p class="resume-date">January 2025 to May 2025, Brantford, Ontario</p>
+                    <ul>
+                        <li>Built a Python and Flask application that supports fuel costing and reporting for trucks and projects.</li>
+                        <li>Created workflows in Zoho Flow that connect Grist, emails, and calendar events for repair tracking.</li>
+                        <li>Developed a Zoho Creator camera tracking app that works with Zoho WorkDrive and sends summary emails.</li>
+                        <li>Worked with real company data, fixed bugs, and adjusted logic based on feedback from staff.</li>
+                    </ul>
+
+                    <h4>Sales Associate, Old Navy</h4>
+                    <p class="resume-date">2023 to present, Hamilton, Ontario</p>
+                    <ul>
+                        <li>Handled customer payments accurately in a busy store environment.</li>
+                        <li>Helped customers find products and answered questions in a friendly way.</li>
+                        <li>Worked with the team to keep stock organized and to set up displays.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Volunteer Experience</h3>
+                    <h4>Old Navy Community Support</h4>
+                    <p class="resume-date">2023 to present</p>
+                    <p>
+                        Volunteered outside of normal shifts to help with community and store events.
+                        This showed commitment to the company and to supporting others.
+                    </p>
+
+                    <h4>Soccer Coach, Peoples Church</h4>
+                    <p class="resume-date">2017 to 2019</p>
+                    <p>
+                        Coached youth soccer teams, planned basic drills, and encouraged teamwork,
+                        sportsmanship, and regular activity.
+                    </p>
+
+                    <a class="btn btn-primary btn-full" href="Lucas-Kuyvenhoven-resume.docx" target="_blank" rel="noopener">
+                        Download Full Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section with details and links -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+        <p class="section-intro">
+            I am open to full time, part time, and junior software developer opportunities.
+            Please contact me if you would like to talk or see more examples of my work.
+        </p>
+
+            <div class="contact-grid">
+                <div class="card contact-card">
+                    <h3>Contact Details</h3>
+                    <ul class="contact-list">
+                        <li><strong>Email:</strong> <a href="mailto:lucas.kuyvenhoven@mohawkcollege.ca">lucas.kuyvenhoven@mohawkcollege.ca</a></li>
+                        <li><strong>Phone:</strong> <a href="tel:12894562950">289 456 2950</a></li>
+                        <li><strong>Location:</strong> Hamilton, Ontario, Canada</li>
+                    </ul>
+                </div>
+
+                <div class="card contact-card">
+                    <h3>Online</h3>
+                    <ul class="contact-list">
+                        <li><strong>GitHub:</strong> <a href="https://github.com/LucasKuy" target="_blank" rel="noopener">github.com/LucasKuy</a></li>
+                        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lucaskuy" target="_blank" rel="noopener">linkedin.com/in/lucaskuy</a></li>
+                    </ul>
+                    <p class="contact-note">
+                        If you would like to see more code samples or academic projects,
+                        I can share them on request.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- footer with current year -->
+<footer class="site-footer">
+    <div class="container footer-container">
+        <p>&copy; <span id="year"></span> Lucas Kuyvenhoven. Built with HTML, CSS, and GitHub Pages.</p>
+    </div>
+</footer>
+
+<!-- current year -->
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

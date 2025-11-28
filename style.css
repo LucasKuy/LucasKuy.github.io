@@ -1,0 +1,504 @@
+/* reset box sizing so padding works as expected */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* base page setup and font */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #151515;
+    color: #f3f4f6;
+    scroll-behavior: smooth;
+}
+
+/* default line height for text */
+body {
+    line-height: 1.6;
+}
+
+/* shared container for centered content */
+.container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* header bar that sticks to the top */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(21, 21, 21, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+/* header layout for logo and navigation */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+/* logo area with icon and name */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* small coloured circle for logo mark */
+.logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 20% 20%, #f97316, #a855f7);
+    color: #111827;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* text next to the logo mark */
+.logo-text {
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+}
+
+/* navigation menu layout */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/* base style for navigation links */
+.main-nav a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    font-weight: 400;
+    position: relative;
+}
+
+/* underline animation for navigation links */
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #f97316, #fbbf24);
+    border-radius: 999px;
+    transition: width 0.2s ease;
+}
+
+/* show underline when hovering a link */
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* hero section background and spacing */
+.hero-section {
+    padding: 4.5rem 0 3.5rem;
+    background:
+        radial-gradient(circle at top left, rgba(248, 250, 252, 0.04), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(244, 114, 182, 0.12), transparent 55%);
+}
+
+/* grid layout so text and image sit side by side */
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 2.5rem;
+    align-items: center;
+}
+
+/* small line above hero heading */
+.tagline {
+    font-size: 0.9rem;
+    color: #f97316;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0 0 0.75rem;
+}
+
+/* main hero heading */
+.hero-text h1 {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    margin: 0 0 1rem;
+}
+
+/* gradient effect for my name */
+.accent {
+    background: linear-gradient(90deg, #f97316, #f97316);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* main summary paragraph style */
+.summary {
+    font-size: 0.98rem;
+    color: #f3f4f6;
+    max-width: 42rem;
+    margin-bottom: 1.5rem;
+}
+
+/* layout for the hero buttons */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* small note under hero section */
+.assignment-note {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+/* flex container for hero image */
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* style for my headshot photo */
+.hero-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 32px;
+    object-fit: cover;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+    border: 3px solid rgba(249, 115, 22, 0.7);
+}
+
+
+/* base button style shared by all buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.25rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease,
+        border-color 0.15s ease;
+    white-space: nowrap;
+}
+
+/* primary button with warm colour gradient */
+.btn-primary {
+    background: linear-gradient(90deg, #f97316, #fbbf24);
+    color: #111827;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.6);
+}
+
+/* hover effect for primary button */
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.8);
+}
+
+/* outline button with transparent background */
+.btn-outline {
+    border-color: rgba(156, 163, 175, 0.8);
+    color: #f9fafb;
+    background: transparent;
+}
+
+/* hover effect for outline button */
+.btn-outline:hover {
+    border-color: #f97316;
+    background: rgba(24, 24, 27, 0.95);
+}
+
+/* full width button used under resume */
+.btn-full {
+    width: 100%;
+    justify-content: center;
+}
+
+/* base look for all regular sections */
+.section {
+    padding: 3.5rem 0;
+    background: #18181b;
+}
+
+/* alternate section with soft gradient background */
+.section-alt {
+    padding: 3.5rem 0;
+    background:
+        radial-gradient(circle at top right, rgba(249, 115, 22, 0.12), transparent 55%),
+        #111827;
+}
+
+/* titles of sections like Skills, Projects, etc. */
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+/* intro text under section titles */
+.section-intro {
+    font-size: 0.95rem;
+    color: #9ca3af;
+    max-width: 36rem;
+    margin-bottom: 2rem;
+}
+
+/* grid setups for skills, projects, resume and contact */
+.skills-grid,
+.projects-grid,
+.resume-grid,
+.contact-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* skills cards layout */
+.skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* project cards layout */
+.projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* resume cards layout */
+.resume-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* contact cards layout */
+.contact-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* shared card design used in multiple places */
+.card {
+    background: #18181b;
+    border-radius: 18px;
+    padding: 1.25rem 1.4rem;
+    border: 1px solid rgba(55, 65, 81, 0.8);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* h3 headings inside cards */
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+/* h4 headings inside cards */
+.card h4 {
+    margin-bottom: 0.4rem;
+    margin-top: 0.7rem;
+    font-size: 0.98rem;
+}
+
+/* list style inside cards */
+.card ul {
+    padding-left: 1.1rem;
+    margin: 0.4rem 0 0.4rem;
+    font-size: 0.9rem;
+}
+
+/* spacing between card list items */
+.card li {
+    margin-bottom: 0.25rem;
+}
+
+/* short tagline sentence under each project title */
+.project-card .project-tagline {
+    font-size: 0.9rem;
+    color: #fde68a;
+    margin-bottom: 0.5rem;
+}
+
+/* bullet list of project details */
+.project-details {
+    font-size: 0.9rem;
+}
+
+/* small line that lists technologies used */
+.project-tech {
+    margin-top: 0.6rem;
+    font-size: 0.86rem;
+    color: #9ca3af;
+}
+
+/* left border for education timeline */
+.timeline {
+    margin-top: 1rem;
+    border-left: 2px solid rgba(75, 85, 99, 0.9);
+    padding-left: 1.2rem;
+}
+
+/* container for each item in the timeline */
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.4rem;
+}
+
+/* small round dot on the timeline */
+.timeline-dot {
+    position: absolute;
+    left: -1.5rem;
+    top: 0.25rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #f97316, #fbbf24);
+}
+
+/* main title inside timeline item */
+.timeline-content h3 {
+    margin: 0 0 0.1rem;
+    font-size: 1rem;
+}
+
+/* school or organization name */
+.timeline-place {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+/* dates under education items */
+.timeline-date {
+    margin: 0.1rem 0 0.4rem;
+    font-size: 0.86rem;
+    color: #9ca3af;
+}
+
+/* small date text used in resume section */
+.resume-date {
+    font-size: 0.86rem;
+    color: #9ca3af;
+    margin-top: 0;
+}
+
+/* contact list without default bullets */
+.contact-card .contact-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* spacing between contact lines */
+.contact-card .contact-list li {
+    margin-bottom: 0.3rem;
+}
+
+/* links in the contact card */
+.contact-card a {
+    color: #f97316;
+    text-decoration: none;
+}
+
+/* underline when hovering contact links */
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* note text inside contact section */
+.contact-note {
+    font-size: 0.86rem;
+    color: #9ca3af;
+    margin-top: 0.7rem;
+}
+
+/* footer layout and colours */
+.site-footer {
+    padding: 1.25rem 0 1.5rem;
+    background: #09090b;
+    border-top: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+/* footer text centered */
+.footer-container {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+/* default link colour on the site */
+a {
+    color: #f97316;
+}
+
+/* lighter link colour when hovering */
+a:hover {
+    color: #fed7aa;
+}
+
+/* responsive rules for tablets and small laptops */
+@media (max-width: 768px) {
+    /* stack logo and nav vertically */
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        height: auto;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+
+    /* allow nav links to wrap */
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    /* put hero text and image on separate rows */
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* adjust hero padding on smaller screens */
+    .hero-section {
+        padding-top: 3.5rem;
+    }
+
+    /* keep buttons side by side or wrapped */
+    .hero-actions {
+        flex-direction: row;
+    }
+}
+
+/* extra small screen rules for phones */
+@media (max-width: 480px) {
+    .hero-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* reduce section padding on phones */
+    .section {
+        padding: 3rem 0;
+    }
+}
